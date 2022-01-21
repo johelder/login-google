@@ -1,21 +1,12 @@
 export interface IUser {
-  idToken: string;
-  serverAuthCode: string;
-  user: {
-    email: string;
-    id: string;
-    photo: string;
-    name: string;
-  };
+  id: string;
+  name: string | null;
+  email: string;
+  photo: string | null;
+  familyName: string | null;
+  givenName: string | null;
 }
 
 export interface IUserState {
-  idToken: string;
-  serverAuthCode: string;
-  user: {
-    email: string;
-    id: string;
-    photo: string;
-    name: string;
-  };
+  user: IUser;
 }
