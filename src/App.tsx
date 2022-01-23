@@ -1,11 +1,25 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {StatusBar} from 'react-native';
+
+import {Routes} from './routes';
+
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
+
+import {Provider} from 'react-redux';
+import store from './store';
 
 const App = () => {
+  GoogleSignin.configure();
+
   return (
-    <View>
-      <Text>KKKKKKKKKKKKKKKKKKKK</Text>
-    </View>
+    <Provider store={store}>
+      <StatusBar
+        backgroundColor="transparent"
+        barStyle="light-content"
+        translucent
+      />
+      <Routes />
+    </Provider>
   );
 };
 
