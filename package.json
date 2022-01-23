@@ -12,8 +12,12 @@
   "dependencies": {
     "@react-native-firebase/app": "^14.2.2",
     "@react-native-google-signin/google-signin": "^7.0.4",
+    "@react-navigation/native": "^6.0.6",
+    "@react-navigation/native-stack": "^6.2.5",
     "react": "17.0.2",
     "react-native": "0.66.4",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.10.2",
     "react-native-status-bar-height": "^2.6.0",
     "react-native-svg": "^12.1.1",
     "react-native-svg-transformer": "^1.0.0",
