@@ -8,6 +8,8 @@ A simple project, in order to implement a login with Google and persist the user
 ## Screenshots | 	:camera_flash:
 ![foxlearn](./.github/foxlearn.png)
 
+[Image credits](https://dribbble.com/shots/9999705-Foxlearn)
+
 ---
 
 ## Techs | 🚀
