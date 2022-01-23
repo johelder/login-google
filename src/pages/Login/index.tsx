@@ -1,4 +1,9 @@
 import React, {useCallback} from 'react';
+import {Alert} from 'react-native';
+
+import {useNavigation} from '@react-navigation/native';
+import {RootStackParamList} from '../../routes/stack.routes';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 import {useDispatch} from 'react-redux';
 import {GoogleLogin} from '../../store/modules/user/actions';
@@ -10,9 +15,14 @@ import FoxSvg from '../../assets/fox.svg';
 import GoogleIcon from '../../assets/google-icon.svg';
 
 import * as S from './styles';
-import {Alert} from 'react-native';
+
+export type StackRoutesProps = NativeStackNavigationProp<
+  RootStackParamList,
+  'Home'
+>;
 
 export const Login = () => {
+  const navigation = useNavigation<StackRoutesProps>();
   const dispatch = useDispatch();
 
   const handleSignIn = useCallback(async () => {
@@ -25,7 +35,8 @@ export const Login = () => {
     const user = response.data as IUser;
 
     dispatch(GoogleLogin(user));
-  }, [dispatch]);
+    navigation.navigate('Home');
+  }, [dispatch, navigation]);
 
   return (
     <S.Container>
